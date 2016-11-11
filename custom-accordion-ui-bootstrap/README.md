@@ -22,6 +22,5 @@ How can I style the Accordion?</br>
                         { isOpen : false    } ]</br></br>
 						</code> Then remember to add <code>is-open='menuStatus[0].isOpen'</code> to your <code>'div uib-accordion-group'</code></br>
 						Just edit the index.html file and you'll see how I have my <code>'uib-accordion-heading'</code> and just copy that.</p>
-            </br></br>
 Where can I checkout more custom directives you've done? </br>
 <p>stay tuned to my github <a href="https://github.com/brendancopley">https://github.com/brendancopley</a> & my webiste: <a href="http://brendancopley.com">brendancopley.com</a></p>
