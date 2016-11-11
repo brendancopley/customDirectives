@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI-Bootstrap Accordion</title>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body ng-controller="mainCtrl">
+<div>
+  <script type="text/ng-template" id="group-template.html">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title" style="color:#fa39c3">
+          <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+            <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+              {{heading}}
+            </span>
+          </a>
+        </h4>
+      </div>
+      <div class="panel-collapse collapse" uib-collapse="!isOpen">
+        <div class="panel-body" style="text-align: right" ng-transclude></div>
+		<div class="borderBottom1"></div>
+      </div>
+    </div>
+  </script>
+<div class="container">
+</br>
+<uib-accordion>
+     <div uib-accordion-group class="panel-white" is-open='menuStatus[0].isOpen'>
+      <uib-accordion-heading>
+        <i style="padding-right:10px;" class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': menuStatus[0].isOpen, 'glyphicon-chevron-up': !menuStatus[0].isOpen}"></i>What Makes This Custom Directive Great? 
+      </uib-accordion-heading>
+      <p>It's actually very simple, go into the sourceapp.js file and you'll see I've copied the ui-bootstrap accordian template so you can use the same structure of <code>'uib-accordion'</code> as you've always used without having to remember a new element name to use each time.</p>
+    </div>
+    <div uib-accordion-group id="anything" class="panel-white" is-open='menuStatus[2].isOpen'>
+      <uib-accordion-heading>
+        <i style="padding-right:10px;" class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': menuStatus[2].isOpen, 'glyphicon-chevron-up': !menuStatus[2].isOpen}"></i>How can I style the Accordion?
+      </uib-accordion-heading>
+      <p>You can style the accordion by using the <code>style.css</code> file or the <code>style.scss</code> file if you prefer to use <b>SASS</b>. In the file you'll see <code>.panel-open {
+  color: #28acb3; }</code> or the mixin <code>@include activeColor1();</code> just simply adjust the color to the color of your choice. Also you can use custom CSS ids like <code>id="anything"</code> and style your accordion headings differently in the same <code>uib-accordion</code> . Just remember to add <code>.panel.panel-open</code> after the id in your css file to do that.</p>
+    </div>
+    <div uib-accordion-group class="panel-white" is-open='menuStatus[3].isOpen'>
+      <uib-accordion-heading>
+        <i style="padding-right:10px;" class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': menuStatus[3].isOpen, 'glyphicon-chevron-up': !menuStatus[3].isOpen}"></i>How can I have the first panel closed or open? 
+      </uib-accordion-heading>
+      <p>That's really simple just include the follow from in my <code>soureapp.js</code> file the angularjs code under the controller into your controller: </br></br><code>$scope.menuStatus = [   { isOpen : true     },</br>
+                        { isOpen : false    }, </br>
+                        { isOpen : false    } ]</br></br>
+						</code> Then remember to add <code>is-open='menuStatus[0].isOpen'</code> to your <code>'div uib-accordion-group'</code></br>
+						Just edit the index.html file and you'll see how I have my <code>'uib-accordion-heading'</code> and just copy that.</p>
+    </div>
+    <div uib-accordion-group id="anything2" class="panel-white" is-open='menuStatus[4].isOpen'>
+      <uib-accordion-heading>
+       <i style="padding-right:10px;" class="pull-left glyphicon" ng-class="{'glyphicon-chevron-down': menuStatus[4].isOpen, 'glyphicon-chevron-up': !menuStatus[4].isOpen}"></i> Where can I checkout more custom directives you've done? 
+      </uib-accordion-heading>
+      <p>stay tuned to my github <a href="https://github.com/brendancopley">https://github.com/brendancopley</a> & my webiste: <a href="http://brendancopley.com">brendancopley.com</a></p>
+    </div>
+  </uib-accordion>
+</div>
+</div>
+  <!-- JS (load angular, ui-router, and our custom js file) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.min.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.2.0.js"></script>
+  <script src="js/sourceapp.js"></script>
+</body>
+</html>

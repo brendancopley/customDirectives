@@ -1,0 +1,35 @@
+@mixin activeColor1($color: #28acb3) {
+     color: $color;
+}
+.panel-white{
+	box-shadow:none;
+}
+.panel-open{
+	 @include activeColor1();
+	p, li{
+	  color:#000;
+	}
+  .borderBottom1{
+    &:before {
+      content : "";
+      position: absolute;
+      transform:translateX(15px);
+      height  : 1px;
+      width   : 50px;  /* or 100px */
+      border-bottom:3px solid #9b9b9c;
+    }
+  }
+}
+#anything{
+  &.panel.panel-open{
+  	 @include activeColor1(#8f42f4);
+  }
+}
+#anything2{
+  &.panel.panel-open{
+  	 @include activeColor1(#42f4c2);
+  }
+}
+.panel-group .panel-heading+.panel-collapse .panel-body {
+    border-top: none!important;
+}
