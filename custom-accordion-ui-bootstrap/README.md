@@ -1,6 +1,5 @@
 # customDirectives
 </br>
-</br>
 Accordion (Made Pretty)
 </br>
 </br>
