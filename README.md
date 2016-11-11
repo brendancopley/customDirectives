@@ -1,8 +1,11 @@
 # customDirectives
 </br>
+</br>
 This is a repository for custom directives I've written that use UI-Bootstrap for Angular 1.5.8
 </br>
+</br>
 You'll find these custom directives:
+</br>
 </br>
 1. Accordion (Made Pretty)
 </br>
