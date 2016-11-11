@@ -15,7 +15,7 @@ How can I style the Accordion?</br>
   color: #28acb3; }</code> or the mixin <code>@include activeColor1();</code> just simply adjust the color to the color of your choice. Also you can use custom CSS ids like <code>id="anything"</code> and style your accordion headings differently in the same <code>uib-accordion</code> . Just remember to add <code>.panel.panel-open</code> after the id in your css file to do that.</p>
 </br>
 How can I have the first panel closed or open? </br>
-<p>That's really simple just include the follow from in my <code>soureapp.js</code> file the angularjs code under the controller into your controller: </br></br><code>$scope.menuStatus = [   { isOpen : true     },<br>
+<p>That's really simple just include the follow from in my <code>soureapp.js</code> file the angularjs code under the controller into your controller: <br><code>$scope.menuStatus = [   { isOpen : true     },<br>
                         { isOpen : false    }, <br>
                         { isOpen : false    } ]<br><br>
 						</code> Then remember to add <code>is-open='menuStatus[0].isOpen'</code> to your <code>'div uib-accordion-group'</code></br>
