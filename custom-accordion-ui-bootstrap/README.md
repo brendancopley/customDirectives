@@ -1,7 +1,4 @@
-# customDirectives
-</br>
-Accordion (Made Pretty)
-</br>
+# customDirectives Accordion
 </br>
 <a href="https://brendancopley.github.io/customDirectives/custom-accordion-ui-bootstrap/" target="_blank">Example DEMO</a>
 </br>
